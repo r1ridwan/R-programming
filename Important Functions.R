@@ -6,15 +6,15 @@ setwd("I:/Bioinformatics/Scripts")
 
 #If you want to check what things you have done througout the full session at a particular time, you should use 
 sessionInfo()
-==================================================
+-----------------------------------------------------------
 
 #TO SEE THE STRUCTURE OF DATA
 str(datafilename)
-=====================================================
+-----------------------------------------------------------
 
 #TO SEE THE NUMBER OF ROWS IN DATA
 nrow(datafilename)
-==================================================
+-----------------------------------------------------------
 
 # CHECK  VERSIONS (Bioconductor, Packages, R)
 R.version
@@ -24,7 +24,7 @@ packageVersion("dplyr")
 # CHECK BIOCONDUCTOR VERSION
 tools:::.BioC_version_associated_with_R_version()
 
-====================================================
+-----------------------------------------------------------
 
 # HOW TO GET HELP FOR ANY PACKAGES? HOW TO SEE R DOCUMENTATION FOR A PACKAGE? 
 # HOW TO BROWS VIGNETTES
@@ -35,16 +35,16 @@ browseVignettes("packagename")
 help(BSgenome)
 browseVignettes("BSgenome")
 help(package="GenomicRanges", help_type = "html")
-==============================================================
+-----------------------------------------------------------
 
 # WHEN YOU WANT TO KNOW ABOUT A PARTICULAR FUNCTION, JUST DO THIS FILLOWING WAY-
 packagesname::functionname
-===========================================================
+-----------------------------------------------------------
 # KEYBOARD SHORTCUT
 ctrl + shift + M = Pipe operator (%>%)
 alt + - = Assignment operator (<-)
 ctrl + shift + R = Sectioncreate hobe
-===================================================================
+-----------------------------------------------------------
 # Install packages from source file and by downloading the packages file
 # download the source file
 download.file(
@@ -55,7 +55,7 @@ install.packages("methylKit_0.99.2.tar.gz",
                  repos=NULL,type="source")
 # delete the source file
 unlink("methylKit_0.99.2.tar.gz")
-===========================================================================
+-----------------------------------------------------------
 library(MASS)
 ls("package:MASS") # functions in the package
 ls() # objects in your R enviroment
@@ -65,7 +65,7 @@ help("hist")
 # search the word "hist" in help pages
 help.search("hist")
 ??hist
-==========================================================================
+-----------------------------------------------------------
 # How to save a R object for future use
 # save your R objects
 save(cpgi.df,enh.df,file="mydata.RData")
@@ -95,7 +95,7 @@ mydata = readRDS("mydata.rds")
 save(mydata, file = "mydata.RData")
 load("mydata.RData") #when we load it we need to specify the directory
 mydata 
-=========================================================================================
+-----------------------------------------------------------
 # How to delete file from directory
 # At first go to the target directory where files you want to delete, then follow the below codes
 unlink("filename")

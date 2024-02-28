@@ -1,0 +1,88 @@
+01/ BSgenome: 			Software infrastructure for efficient representation of full genomes and their SNPs
+
+02/ Biostrings: 		Efficient manipulation of biological strings
+
+03/ IRanges: 			Foundation of integer range manipulation in Bioconductor
+
+04/ GenomicRanges: 		Representation and manipulation of genomic intervals
+	
+05/ GenomicFeatures: 		Conveniently import and query gene models
+
+06/ plyranges: 			A fluent interface for manipulating GenomicRanges
+
+07/ ShortRead: 			FASTQ input and manipulation. Very Important 
+
+08/ Rqc : 			Quality contorl tool for high throughput sequencing data
+
+09/ S4Vectors: 			Foundation of vector-like and list-like containers in Bioconductor
+
+10/ GenomeInfoDb: 		Utilities for manipulating chromosome names, including modifying them to follow a particular naming style
+	
+11/ GenomicAlignments: 		Representation and manipulation of short genomic alignments
+
+12/ AnnotationHub: 		Client to access AnnotationHub resources
+
+13/ Rsamtools: 			Binary alignment (BAM), FASTA, variant call (BCF), and tabix file import
+
+14/ GenomicAlignments: 		Representation and manipulation of short genomic alignments
+
+15/ rtracklayer: 		R interface to genome annotation files and the UCSC genome browser
+
+16/ GEOquery: 			Get data from NCBI Gene Expression Omnibus (GEO)
+
+17/ biomaRt: 			Interface to BioMart databases (i.e. Ensembl)
+
+18/ SRAdb:			A compilation of metadata from NCBI SRA and tools
+
+20/ ArrayExpress:		Access the ArrayExpress Microarray Database at EBI and build Bioconductor data structures: ExpressionSet, AffyBatch, NChannelSet
+
+21/ VariantAnnotation:		Annotation of Genetic Variants. VCF file, Annotate variants, compute amino acid coding changes, predict coding outcomes.
+
+22/ DESeq2:			Differential gene expression analysis based on the negative binomial distribution
+
+23/ edgeR:			Empirical Analysis of Digital Gene Expression Data in R
+
+24/ genomation:			Summary, annotation and visualization of genomic data
+
+25/ Gviz:			Plotting data and annotation information along genomic coordinates
+
+26/ ggbio: 			Visualization tools for genomic data
+
+27/ SummarizedExperiment:	SummarizedExperiment container
+	
+=============================================================================================================================================================================================
+
+01/ Homo.sapiens: 		Annotation package for the Homo.sapiens object
+
+02/ GenomicFiles: 		Distributed computing by file or by range
+
+03/ BiocParallel: 		Bioconductor facilities for parallel evaluation
+
+04/ BiocPkgTools: 		Collection of simple tools for learning about Bioc Packages
+
+05/ mirbase.db: 		the microRNA database
+
+06/ FDb.UCSC.tRNAs: 		Annotation package for FeatureDb object(s)
+
+07/ Biobase: 			Base functions for Bioconductor
+
+08/ ALL: 			A data package- The data consist of microarrays from 128 different individuals with acute lymphoblastic leukemia (ALL)
+
+09/ hgu95av2.db: 		Affymetrix Affymetrix HG_U95Av2 Array annotation data (chip hgu95av2). Affymetrix Human Genome U95 Set annotation data (hgu95av2) assembled using data from public data repositories
+
+10/ airway: 			RangedSummarizedExperiment for RNA-Seq in airway smooth muscle cells, by Himes et al PLoS One 2014
+
+11/ oligo:			Preprocessing tools for oligonucleotide arrays
+
+12/ limma:			Linear Models for Microarray Data
+
+13/ leukemiasEset: 		Leukemia's microarray gene expression data (expressionSet). Expressionset containing gene expresion data from 60 bone marrow samples of patients with one of the four main types of leukemia (ALL, AML, CLL, CML) or non-leukemia.
+
+14/ minfi:			Analyze Illumina Infinium DNA methylation arrays
+
+
+
+
+
+
+
