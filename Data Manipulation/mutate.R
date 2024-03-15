@@ -1,20 +1,20 @@
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
-#Gapminder Datasets: it tracks economic and social indicators like life expectancy and the GDP per capita of countries over time
+
+# Load Gapminder Datasets:
 library(gapminder)
 
-#Datasets
+# Datasets
 gapminder
 
-##mutate functions---------------------------------------------------------
-gapminder %>%
+## mutate functions
   mutate(pop = pop / 1000000)
-#add new variable
+# add new variable
 gapminder %>%
   mutate(gdp = pop * gdpPercap)
 
-#Find Highest total gdp
+# Find Highest total gdp
 gapminder %>%
   mutate(gdp = pop * gdpPercap) %>%
   filter(year == 2007) %>%

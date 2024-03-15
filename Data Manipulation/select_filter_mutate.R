@@ -32,10 +32,6 @@ library(hflights)
 View(hflights)
 
 
-
-
-
-
 filter(hflights, DepTime < 500 | ArrTime > 2200)->flight5
 
 filter(hflights,Dest=="JFK" & Cancelled==1 )->flight
