@@ -2,14 +2,14 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 
-# Gapminder Datasets:------------------------------------------------------------------
-# it tracks economic and social indicators like life expectancy and the GDP per capita of countries over time
+# Gapminder Datasets:
+# it tracks economic and social indicators like life expectancy and the GDP per capital of countries over time
 library(gapminder)
 
-#Datasets
+# Datasets
 gapminder
 
-# filter functions------------------------------------------------------------------
+# filter functions
 gapminder %>%
   filter(year == 2007)
 

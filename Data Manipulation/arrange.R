@@ -1,30 +1,31 @@
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
-#Gapminder Datasets: it tracks economic and social indicators like life expectancy and the GDP per capita of countries over time
+
+# Load Gapminder Datasets
 library(gapminder)
 
-#Datasets
+# Datasets
 gapminder
 
-##arrange function--------------------------------------------------
-#ascending order (lowest to highest)
+## Arrange function
+# ascending order (lowest to highest)
 gapminder %>%
   arrange(gdpPercap)
-#Descending order (Highest to Lowest)
+# Descending order (Highest to Lowest)
 gapminder %>%
   arrange(desc(gdpPercap))
-#Highest gdpPercap countries in 2007
+# Highest gdpPercap countries in 2007
 gapminder %>%
   filter(year == 2007) %>%
   arrange(desc(gdpPercap))
 
-#United States pupulation 
+# United States population 
 gapminder %>%
   arrange(pop) %>%
   filter(country == "United States")
 
-#find Highest populations and lifeExp is greater than 50
+# Find Highest populations and lifeExp is greater than 50
 gapminder %>%
   arrange(desc(pop)) %>%
   filter(lifeExp > 50)

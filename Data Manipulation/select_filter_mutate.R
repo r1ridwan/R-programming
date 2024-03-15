@@ -1,15 +1,15 @@
-
-#Loding requried package
+# Loading required package
 library(tidyverse)
 
-# it will show you all the existing data in R
+# it will show all the existing data in R
 data()
 
-#Load Starward data
+# Load Starward data
 view(starwars)
+data <- starwars
 
 # Here we select 4 variable from starwars dataset. Then filter only human data.
-# Then remove NA values with "na.omit()" funciton. Then convert height value from cm to m.
+# Then remove NA values with "na.omit()" function. Then convert height value from cm to m.
 # Then create new variable for BMI with mutate functions
 # Then group the data by sex and get average BMI with mutate functions
 starwars %>%
