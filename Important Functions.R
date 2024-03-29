@@ -59,6 +59,7 @@ Navigate command history =	Up/Down
 Popup command history =	Ctrl+Up	
 Interrupt currently executing command	= Esc	
 Change working directory	= Ctrl+Shift+H
+comment or uncomment the selected lines = control + shift + C
 
 
 # Install packages from source file and by downloading the packages file

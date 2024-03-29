@@ -11,10 +11,14 @@ x <- list("a", "b", 1:10)
 x
 length(x)
 
-# Sample Vector
+# Vectors are generally created using the c() function
 v <- c(1,4,4,3,2,2,3)
+class(v)
 v[c(2,3,4)]
 v[1:3]
+# To create vectors of consecutive numbers, the : operator is very helpful
+v2 <- 1:20
+class(v2)
 
 # LinK: https://www.tutorialspoint.com/r/r_vectors.htm
 
@@ -28,24 +32,51 @@ combined=c(s,  n)
 print(combined)
 
 
-# 2. SINGLE ELEMENT VECTOR
+
+# 2. SINGLE ELEMENT VECTOR Types
 # Atomic vector of type CHARACTER
 typeof("abc") 
+v6 <- c("a", "b")
+class(v6)
+
+# Numeric vector
+v4 <- c(0.5, 0.6)
+class(v4)
 
 # Atomic vector of type DOUBLE
 typeof(12.5)
 
 # Atomic vector of type INTEGER
 typeof(63L)
+v7 <- 1:10
+class(v7)
 
 # Atomic vector of type LOGICAL
 typeof(TRUE)
+v5 <- c(TRUE, FALSE)
+class(v5)
 
 # Atomic vector of type COMPLEX
 typeof(2+4i)
+v8 <- c(1+0i, 2+0i)
+class(v8)
 
 # Atomic vector of type RAW
 typeof(charToRaw('hello'))
+
+# Mixed vector
+# Character
+x1 <- c(1.7, "a")
+class(x1)
+
+# Numeric
+y1 <- c(TRUE, 2)
+class(y1)
+
+# character
+z1 <- c("a", F)
+class(z1)
+
 
 
 # 3. MULTIPLE ELEMENTS VECTOR
@@ -55,15 +86,43 @@ v2 <- 3.8:11.4
 v2
 
 
+
 # 4. Using sequence (Seq.) operator
-# Create vector with elements from 5 to 9 incrementing by 0.4
+# Create vector with elements from 5 to 9 increment by 0.4
 print(seq(5,9, by=0.4))
+v3 <- seq(from = 1, to = 20, by = 3)
+class(v3)
+v3 <- seq(1, 20, 3)
+v3
+
+# Index sequence vector using seq_len()
+index_seq <- seq_len(15)
+index_seq
 
 
 
+# 5. Repeated values vector using rep()
+repeated_values <- rep(1, times = 5)
+repeated_values
 
-# 5. ACCESSING VECTOR ELEMENTS
-#Accessing vector elements using position
+
+
+# 6. Vector created using vectorized operation
+new_vector <- repeated_values * 2
+new_vector
+class(new_vector)
+heights <- c(1.2, 1.3, 1.4, 1.5, 1.6) * 100
+heights
+
+
+
+# 7. ACCESSING VECTOR ELEMENTS
+## Sub-setting
+ages <- c(22, 33, 45, 62, 34)
+# subset/access by element position
+ages[3]
+
+# Accessing vector elements using multiple position
 t <- c("Sun","Mon","Tue","Wed","Thurs","Fri","Sat")
 u <- t[c(3,1,7)]
 print(u)
@@ -76,30 +135,37 @@ print(v)
 y <- t[c(1,0,0,0,0,0,7)]
 print(y)
 
+# subset by sequence (: operator)
+ages[1:3]
+
+# reverse subset
+ages[-1]
 
 
-# 6. VECTOR MANUPULATION
+
+# 8. VECTOR MANUPULATION
 v1 <- c(3,8,4,5,0,11)
 v2 <- c(4,11,0,8,1,2)
 
-#Vector Addition 
+# Vector Addition 
 add.result<- v1+v2 
 add.result
 
-#Vector subtraction 
+# Vector subtraction 
 sub.result<- v2-v1 
 sub.result
 
-#Vector Multiplication
+# Vector Multiplication
 multi.result<- v1*v2 
 print(multi.result)
 
-#Vector Division 
+# Vector Division 
 divi.result<-v1/v2 
 print(divi.result)
 
 
-# 7.  VECTOR RECYCLING
+
+# 9.  VECTOR RECYCLING
 # If two vector are unequal in length, then shorter vector will recycle to match the longer vector, here below the shorter vector is v2, and it recycle two time to match the longer cycle. 
 v1<- c(3, 4, 5, 6, 7, 8, 9)
 v2<-c(4, 11)# v2 becomes (4,11,4,11,4,11,4)
@@ -109,7 +175,8 @@ sub.result<-v1-v2
 print(sub.result)
 
 
-# 8. VECTOR ELEMENTS SORTING
+
+# 10. VECTOR ELEMENTS SORTING
 v<- c(3,8,4,5,0,11, -9, 304)
 sort.result<- sort(v)
 print(sort.result)
@@ -127,7 +194,8 @@ revsort.result<-sort(v, decreasing = TRUE)
 print(revsort.result)
 
 
-# 9. Vector Arithmetic 
+
+# 11. Vector Arithmetic 
 # For example, suppose we have two vectors a and b.
 a = c (2, 3, 4, 5, 7)
 b = c (4, 7, 8, 9, 10)
@@ -141,7 +209,9 @@ a - b
 a * b
 a / b
 
-# 10. Name Vector Members 
+
+
+# 12. Name Vector Members 
 # We can assign names to vector members. For example, the following variable v is a character string vector with two members.
 v <- c("Mary", "Nishi")
 names(v)= c("First", "Last")
@@ -150,7 +220,8 @@ v["Last"]
 v[c("Last", "First")]
 
 
-# 11. Making a vector filled with values
+
+# 13. Making a vector filled with values
 # 1 will be repeated 50 times
 rep(1, 50)
 # 3 will be repeated 10 times
@@ -165,7 +236,8 @@ rep(1:5, each=4)
 rep(factor(LETTERS[1:3]), 5)
 
 
-# 12. Vector Types Conversion or Data type conversion
+
+# 14. Vector Types Conversion or Data type conversion
 # Treating strings as factors or characters.
 # By default, strings  the data are converted to factors. If you load the data below with read.csv, then all the text columns will be treated as factors, even though it might make more sense to treat some of them as strings. If you don't want your data to be treated as factor instead of string then use the following command.
 data <- read.csv("new_file.csv", stringsAsFactors = FALSE)
