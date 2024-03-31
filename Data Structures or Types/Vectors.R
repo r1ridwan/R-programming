@@ -16,6 +16,7 @@ v <- c(1,4,4,3,2,2,3)
 class(v)
 v[c(2,3,4)]
 v[1:3]
+
 # To create vectors of consecutive numbers, the : operator is very helpful
 v2 <- 1:20
 class(v2)
@@ -98,7 +99,6 @@ v3
 # Index sequence vector using seq_len()
 index_seq <- seq_len(15)
 index_seq
-
 
 
 # 5. Repeated values vector using rep()
