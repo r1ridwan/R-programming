@@ -17,6 +17,9 @@ mat[1,]
 # subset column
 mat[,1]
 
+# Sub-setting elements
+mat[2,1]
+
 # Matrix with dimension names
 mat2 <- matrix(1:12, ncol = 3, nrow = 4, byrow = T, 
               dimnames = list(c("row1", "row2", "row3", "row4"),

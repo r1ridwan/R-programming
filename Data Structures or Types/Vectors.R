@@ -1,4 +1,4 @@
-# Here we will learn about all data structures
+## Vector
 # Vectors are the most basic R data objects and there are six types of atomic vectors. 
 # logical, integer, double, complex, character and raw.
 
@@ -101,6 +101,7 @@ index_seq <- seq_len(15)
 index_seq
 
 
+
 # 5. Repeated values vector using rep()
 repeated_values <- rep(1, times = 5)
 repeated_values
@@ -115,9 +116,8 @@ heights <- c(1.2, 1.3, 1.4, 1.5, 1.6) * 100
 heights
 
 
-
-# 7. ACCESSING VECTOR ELEMENTS
-## Sub-setting
+## 7.  Sub-setting
+# ACCESSING VECTOR ELEMENTS
 ages <- c(22, 33, 45, 62, 34)
 # subset/access by element position
 ages[3]
@@ -140,6 +140,11 @@ ages[1:3]
 
 # reverse subset
 ages[-1]
+
+# subset by logical condition
+vector <- c(10, 20, 30, 40, 50, 60)
+vector[vector > 30]
+vector[vector < 30]
 
 
 

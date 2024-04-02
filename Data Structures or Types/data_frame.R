@@ -76,48 +76,9 @@ students_df[1,2]
 students_df[,1] 
 
 
-# 4. MELTING AND CASTING IN DATA FRAME
-# used to transform data frames between wide and long formats.
-install.packages("MASS")
-library(MASS)
-install.packages("reshape2")
-library(reshape2)
-install.packages("reshape")
-library(reshape)
-
-# Melting function
-# to transforms a data frame from a wide format to a long format
-shipdata<-(head(ships,n=10))
-molten.ships <- melt(shipdata, id = c("type","year")) 
-# Sample data frame (wide format)
-wide_data <- data.frame(
-  ID = c(1, 2, 3),
-  Name = c("Alice", "Bob", "Charlie"),
-  Math = c(85, 78, 90),
-  Science = c(75, 80, 88),
-  English = c(92, 85, 78)
-)
-# Melting the data frame to long format
-long_data <- melt(wide_data, id.vars = c("ID", "Name"), 
-                  variable.name = "Subject", value.name = "Score")
-
-# Casting function
-# to transforms a data frame from a long format to a wide format
-recasted.ship <- cast(molten.ships, type+year~variable,sum) 
-# Sample data frame (long format)
-long_data <- data.frame(
-  ID = c(1, 1, 2, 2, 3, 3),
-  Name = c("Alice", "Alice", "Bob", "Bob", "Charlie", "Charlie"),
-  Subject = c("Math", "Science", "Math", "Science", "Math", "Science"),
-  Score = c(85, 75, 78, 80, 90, 88)
-)
-# Casting the data frame to wide format
-wide_data <- dcast(long_data, ID + Name ~ Subject, value.var = "Score")
-
-
-
-#Apply Function in R – apply vs lapply vs sapply vs mapply vs tapply vs rapply vs vapply
-# 05. Create DataFrame
+ 
+# Apply Function in R – apply vs lapply vs sapply vs mapply vs tapply vs rapply vs vapply
+# 05. Create Data Frame
 # Where the first Argument X is a data frame or matrix
 # Second argument 1 indicated Processing along rows .if it is 2 then it indicated processing along the columns
 # Third Argument is some aggregate function like sum, mean etc or some other user defined functions.
@@ -126,10 +87,75 @@ Weight<-c(78,67,56,44,56,89)
 Height<-c(165, 171,167,167,166,181)
 
 BMI_df<-data.frame(Age,Weight,Height)
-apply(BMI_df,1,sum)# row wise sum up of dataframe using apply function in R
-apply(BMI_df,2,sum)# column wise sum up of dataframe using apply function in R
-apply(BMI_df,2,mean)# column wise mean of dataframe using apply function in R
+apply(BMI_df,1,sum)# row wise sum up of data frame using apply function in R
+apply(BMI_df,2,sum)# column wise sum up of data frame using apply function in R
+apply(BMI_df,2,mean)# column wise mean of data frame using apply function in R
 #PAGE LINK: http://www.datasciencemadesimple.com/apply-function-r/
+
+# Select elements from a data frame with the help of square brackets [ ]. By using a comma, you can indicate what to select from the rows and the columns respectively. 
+# For example:
+my_df[1,2] # selects the value at the first row and second column in my_df DATAFRAME.
+my_df[1:3,2:4] # selects rows 1, 2, 3 and columns 2, 3, 4 in my_df DATAFRAME
+my_df[1, ] #selects all elements of the first row
+my_df[, 1] # Select all elements in the first column
+
+# Sometimes you have many variables and difficult to find out the numbers of columns, in this case name of the variable is the best option
+my_df[1:5, "type"] # Select first five rows and type column 
+
+
+# How to Sort or Order element in a data frame? 
+# In data analysis you can sort your data according to a certain variable in the dataset. In R, this is done with the help of the function order().
+# order() is a function that gives you the ranked position of each element when it is applied on a variable, such as a vector for example:
+a <- c(100, 10, 1000)
+order(a)
+a[order(a)]
+
+  
+
+# Basic data frame operations
+# Create a data frame of boat sale data called bsale
+bsale <- data.frame(name = c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j"),
+                    color = c("black", "green", "pink", "blue", "blue", 
+                              "green", "green", "yellow", "black", "black"),
+                    age = c(143, 53, 356, 23, 647, 24, 532, 43, 66, 86),
+                    price = c(53, 87, 54, 66, 264, 32, 532, 58, 99, 132),
+                    cost = c(52, 80, 20, 100, 189, 12, 520, 68, 80, 100),
+                    stringsAsFactors = FALSE)   # Don't convert strings to factors!
+
+# Explore the bsale dataset:
+head(bsale)     # Show me the first few rows
+str(bsale)      # Show me the structure of the data
+View(bsale)     # Open the data in a new window
+names(bsale)    # What are the names of the columns?
+nrow(bsale)     # How many rows are there in the data?
+
+# Calculating statistics from column vectors
+mean(bsale$age)       # What was the mean age?
+table(bsale$color)    # How many boats were there of each color?
+max(bsale$price)      # What was the maximum price?
+
+# Adding new columns
+bsale$id <- 1:nrow(bsale) # new colum id - value 1-10 hobe, because bsale has total 10 rows thats why nrow(bsale) function is used here
+bsale$age.decades <- bsale$age / 10
+bsale$profit <- bsale$price - bsale$cost
+
+# What was the mean price of green boats?
+with(bsale, mean(price[color == "green"]))
+
+# What were the names of boats older than 100 years?
+with(bsale, name[age > 100])
+
+# What percent of black boats had a positive profit?
+with(subset(bsale, color == "black"), mean(profit > 0))
+
+# Save only the price and cost columns in a new dataframe
+bsale.2 <- bsale[c("price", "cost")]
+
+# Change the names of the columns to "p" and "c"
+names(bsale.2) <- c("p", "c")
+
+# Create a data frame called old.black.bsale containing only data from black boats older than 50 years
+old.black.bsale <- subset(bsale, color == "black" & age > 50)
 
 
 

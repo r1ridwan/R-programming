@@ -122,3 +122,20 @@ unlink("filename")
 unlink(c("filename", "filename", "filename"))
 
 
+## Logical Operator
+# NOT
+# Today is Friday (Positive Statement)
+# Today is not Friday (Negative Statement) ~ Negation
+2 == 2
+!2 == 2
+
+# AND
+2 == 2 && 2 > 1
+2 == 2 && 2 > 3
+2 == 1 && 2 > 3
+
+# OR
+2 == 2 | 2 > 1
+2 == 2 | 2 > 3
+2 == 1 | 2 > 3
+

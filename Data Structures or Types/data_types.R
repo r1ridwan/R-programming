@@ -27,6 +27,7 @@ is_weekday <- T
 is_weekday
 class(is_weekday)
 
+
 # 4. Integer
 # Integer data types represent whole numbers
 # Examples: 1L, -5L

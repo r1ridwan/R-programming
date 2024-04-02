@@ -20,13 +20,15 @@ my_list <- list(
 )
 
 
-## Accessing elements of the list:
-# Accessing by name
+## Sub-setting elements of the list
+# Sub-setting by name
 my_list$scores 
-# Accessing by index
+# Sub-setting by index
 my_list[[2]] 
-# Accessing nested list element
+# Sub-setting nested list element
 my_list$sub_list$a 
+# sub-setting a subset of list elements
+my_list[2:3]
 
 
 ## Operations on Lists:
