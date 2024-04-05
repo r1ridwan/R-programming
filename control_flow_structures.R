@@ -5,7 +5,6 @@
 # Control Functions (next, return, and break)
 
 
-
 # 1. Conditional logic
 num <- -9
 
@@ -35,7 +34,6 @@ if(num2 < 0) {
 # ifelse() function
 # Syntax
 ifelse(condition, true_value, false_value)
-
 x <- 10
 ifelse(x < 0, "negative", "Postive")
 
@@ -54,12 +52,10 @@ ifelse(qol_score < 50, "Poor", "Good")
 # Today is not Friday (Negative Statement) ~ Negation
 2 == 2
 !2 == 2
-
 # AND
 2 == 2 && 2 > 1
 2 == 2 && 2 > 3
 2 == 1 && 2 > 3
-
 # OR
 2 == 2 | 2 > 1
 2 == 2 | 2 > 3

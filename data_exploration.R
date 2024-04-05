@@ -1,5 +1,4 @@
 # Exploring the data
-
 # 1. check dimension
 dim(gapminder)
 
@@ -15,23 +14,23 @@ names(gapminder)
 # 5. examine first few rows
 head(gapminder, 20)
 
-# examine last few rows
+# 6. examine last few rows
 tail(gapminder)
 tail(gapminder, n= 20)
 
-# check data structure 
+# 7. check data structure 
 str(gapminder)
 glimpse(gapminder)
 
-# Check available data
+# 8. Check available data
 data()
 airquality
 head(airquality)
 
-# check missing values
+# 9. check missing values
 is.na(airquality)
 sum(is.na(airquality))
 
-# check duplicated rows
+# 10. check duplicated rows
 duplicated(airquality)
 sum(duplicated(airquality))
