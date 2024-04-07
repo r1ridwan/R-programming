@@ -5,7 +5,7 @@ library(dplyr)
 library(readr)
 myfile <- read_csv("U133AGNF1B.gcrma.avg.csv")
 
-#Selecting Rows and Coulumns-1st Vlaue for ROWS and 2nd Value for COLUMNS
+# Selecting Rows and Columns-1st Value for ROWS and 2nd Value for COLUMNS
 myfile [1, 2]
 myfile[, 4]
 myfile[4, ]

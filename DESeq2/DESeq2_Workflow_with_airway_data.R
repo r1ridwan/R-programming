@@ -1,4 +1,4 @@
-# Thai script from Jubayer Hossain
+# This script from Jubayer Hossain
 
 # Install required
 BiocManager::install("airway")
@@ -21,12 +21,21 @@ data(airway)
 airway
 class(airway)
 
-# extract count data
+# We directly extract count data
 counts_data <- assay(airway)
 head(counts_data)
 
+# OR we can read in counts data
+counts_data <- read.csv('counts_data.csv')
+head(counts_data)
+
+
 # 2. metadata ~ sample information
 col_data <- as.data.frame(colData(airway))
+
+# or, read in sample info
+col_data <- read.csv('sample_info.csv')
+
 
 # Step 1. Preparing data
 col_data <- col_data |>
@@ -127,5 +136,4 @@ contrast_res
 
 plotMA(dds)
 
-dds <- makeExampleDESeqDataSet(n=10000,m=18)
 
