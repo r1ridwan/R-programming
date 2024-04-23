@@ -1,4 +1,0 @@
-```{r}
-read.csv("DESeq2/counts_data.csv")
-```
-
